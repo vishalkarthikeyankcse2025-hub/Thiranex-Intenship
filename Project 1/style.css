@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f8fc;
+  color: #222;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  max-width: 1000px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:focus,
+main a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 55px 20px;
+}
+
+section,
+aside {
+  margin-bottom: 40px;
+}
+
+article {
+  margin-bottom: 0;
+}
+
+main > article > header,
+main > header {
+  margin-bottom: 40px;
+}
+
+main > article > section,
+main > article > aside {
+  margin-bottom: 40px;
+}
+
+main > article > section:last-child,
+main > article > aside:last-child {
+  margin-bottom: 0;
+}
+
+main > header {
+  margin-bottom: 40px;
+}
+
+main > section > h2 {
+  margin-bottom: 35px;
+}
+
+main > section > article {
+  margin-bottom: 40px;
+}
+
+main > section > article:last-child {
+  margin-bottom: 0;
+}
+
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.certifications figure {
+    margin: 0;
+}
+
+.certifications img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.certifications figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+main a {
+  color: #2563eb;
+}
+
+form {
+  max-width: 600px;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2563eb;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 20px;
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+body > a {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #2563eb;
+  z-index: 1000;
+}
+
+body > a:focus {
+  left: 10px;
+}
