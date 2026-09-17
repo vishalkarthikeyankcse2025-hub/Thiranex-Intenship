@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Contact Vishal Karthikeyan through the accessible contact form."
+    />
+
+    <meta name="author" content="Vishal Karthikeyan" />
+
+    <title>Contact | Vishal Karthikeyan</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <header>
+        <h1>Contact Me</h1>
+
+        <p>
+          Have a question or want to get in touch? Send me a message using the
+          form below.
+        </p>
+      </header>
+
+      <section aria-labelledby="contact-form-heading">
+        <h2 id="contact-form-heading">Send a Message</h2>
+
+        <form action="#" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              aria-describedby="message-help"
+              required
+            ></textarea>
+
+            <p id="message-help">
+              Please describe your question or message clearly.
+            </p>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <address>
+        <p>
+          Email:
+          <a href="mailto:vishalkarthikeyank.cse2025@citchennai.net"
+            >vishalkarthikeyank.cse2025@citchennai.net</a
+          >
+        </p>
+      </address>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Vishal Karthikeyan. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
