@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="weather-container">
+
+        <!-- Header -->
+        <header class="weather-header">
+            <h1>Weather Dashboard</h1>
+            <p>Check the current weather in any city</p>
+        </header>
+
+
+        <!-- Search -->
+        <form id="search-form" class="search-form">
+
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        <!-- Loading Message -->
+        <p id="loading" class="loading">
+            Loading...
+        </p>
+
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message">
+            <!-- Error will be displayed here -->
+        </div>
+
+
+        <!-- Weather Dashboard -->
+        <section
+            id="weather-card"
+            class="weather-card"
+        >
+
+            <!-- Location -->
+            <div class="location-info">
+
+                <h2 id="city-name">
+                    Chennai
+                </h2>
+
+                <p id="country-name">
+                    India
+                </p>
+
+            </div>
+
+
+            <!-- Main Temperature -->
+            <div class="temperature-section">
+
+                <span id="temperature">
+                    --°
+                </span>
+
+                <span class="temperature-unit">
+                    C
+                </span>
+
+            </div>
+
+
+            <!-- Weather Metrics -->
+            <div class="weather-metrics">
+
+                <div class="weather-metric">
+                    <span class="metric-label">
+                        Humidity
+                    </span>
+
+                    <strong id="humidity">
+                        --%
+                    </strong>
+                </div>
+
+
+                <div class="weather-metric">
+                    <span class="metric-label">
+                        Wind Speed
+                    </span>
+
+                    <strong id="wind-speed">
+                        -- km/h
+                    </strong>
+                </div>
+
+
+                <div class="weather-metric">
+                    <span class="metric-label">
+                        Weather
+                    </span>
+
+                    <strong id="weather-description">
+                        --
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f8;
+    color: #222;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+   ============================== */
+
+.weather-container {
+    width: 100%;
+    max-width: 550px;
+
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.weather-header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.weather-header h1 {
+    font-size: 32px;
+
+    margin-bottom: 6px;
+}
+
+.weather-header p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   SEARCH FORM
+   ============================== */
+
+.search-form {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.search-form input:focus {
+    border-color: #333;
+}
+
+.search-form button {
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+.search-form button:hover {
+    background: #444;
+}
+
+
+/* ==============================
+   LOADING
+   ============================== */
+
+.loading {
+    display: none;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin: 15px 0;
+}
+
+
+/* ==============================
+   ERROR MESSAGE
+   ============================== */
+
+.error-message {
+    display: none;
+
+    padding: 12px 14px;
+
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+
+    background: #ffe5e5;
+
+    color: #c62828;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   WEATHER CARD
+   ============================== */
+
+.weather-card {
+    display: none;
+
+    padding-top: 10px;
+}
+
+
+/* ==============================
+   LOCATION
+   ============================== */
+
+.location-info {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.location-info h2 {
+    font-size: 26px;
+
+    margin-bottom: 5px;
+}
+
+.location-info p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   TEMPERATURE
+   ============================== */
+
+.temperature-section {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+#temperature {
+    font-size: 64px;
+
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+.temperature-unit {
+    font-size: 24px;
+
+    margin-top: 5px;
+
+    color: #666;
+}
+
+
+/* ==============================
+   WEATHER METRICS
+   ============================== */
+
+.weather-metrics {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.weather-metric {
+    padding: 15px 10px;
+
+    background: #f7f7f7;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 9px;
+
+    text-align: center;
+}
+
+.metric-label {
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.weather-metric strong {
+    display: block;
+
+    font-size: 15px;
+
+    color: #333;
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+   ============================== */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .weather-container {
+        padding: 20px;
+    }
+
+    .weather-header h1 {
+        font-size: 27px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+
+    #temperature {
+        font-size: 54px;
+    }
+
+    .weather-metrics {
+        grid-template-columns: 1fr;
+    }
+}
