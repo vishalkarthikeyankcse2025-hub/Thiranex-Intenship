@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced JavaScript To-Do List">
+    <title>TaskFlow - To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="todo-container">
+
+    <!-- Header -->
+    <header class="todo-header">
+        <div>
+            <span class="eyebrow">TASK MANAGEMENT</span>
+            <h1>TaskFlow</h1>
+            <p>Plan tasks. Track progress. Stay productive.</p>
+        </div>
+
+        <button
+            id="theme-toggle"
+            class="theme-btn"
+            type="button"
+            aria-label="Toggle theme"
+        >
+            <span id="theme-icon">☾</span>
+        </button>
+    </header>
+
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <span>Total</span>
+            <strong id="stat-total">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Active</span>
+            <strong id="stat-active">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Completed</span>
+            <strong id="stat-completed">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Overdue</span>
+            <strong id="stat-overdue">0</strong>
+        </div>
+
+    </section>
+
+
+    <!-- Add Task -->
+    <form id="todo-form" class="todo-form">
+
+        <input
+            type="text"
+            id="todo-input"
+            placeholder="What needs to be done?"
+            maxlength="120"
+            autocomplete="off"
+            required
+        >
+
+        <select id="todo-priority" aria-label="Task priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <input
+            id="todo-date"
+            type="date"
+            aria-label="Due date"
+        >
+
+        <button type="submit" class="add-btn">
+            Add Task
+        </button>
+
+    </form>
+
+
+    <!-- Search and Sort -->
+    <section class="controls">
+
+        <label class="search-box">
+            <span>⌕</span>
+
+            <input
+                id="search-input"
+                type="search"
+                placeholder="Search tasks..."
+                autocomplete="off"
+            >
+        </label>
+
+        <select id="sort-select" aria-label="Sort tasks">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="priority">Priority</option>
+            <option value="due">Due Date</option>
+        </select>
+
+    </section>
+
+
+    <!-- Filters -->
+    <nav class="filters" aria-label="Task filters">
+
+        <button
+            type="button"
+            class="filter-btn active"
+            data-filter="all"
+        >
+            All
+        </button>
+
+        <button
+            type="button"
+            class="filter-btn"
+            data-filter="active"
+        >
+            Active
+        </button>
+
+        <button
+            type="button"
+            class="filter-btn"
+            data-filter="completed"
+        >
+            Completed
+        </button>
+
+    </nav>
+
+
+    <!-- Progress -->
+    <section class="progress-section">
+
+        <div class="progress-info">
+            <span>Completion Progress</span>
+            <strong id="progress-label">0%</strong>
+        </div>
+
+        <div class="progress-track">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+    </section>
+
+
+    <!-- Task List -->
+    <ul id="todo-list" class="todo-list">
+        <!-- Tasks generated with JavaScript -->
+    </ul>
+
+
+    <!-- Empty State -->
+    <section id="empty-state" class="empty-state">
+
+        <div class="empty-icon">✓</div>
+
+        <h2 id="empty-title">
+            No tasks yet
+        </h2>
+
+        <p id="empty-message">
+            Add a task and start getting things done.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="todo-footer">
+
+        <p id="todo-count" class="todo-count">
+            0 tasks remaining
+        </p>
+
+        <button
+            type="button"
+            id="clear-completed"
+            class="clear-completed"
+        >
+            Clear completed
+        </button>
+
+    </footer>
+
+</main>
+
+
+<!-- Toast -->
+<div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
